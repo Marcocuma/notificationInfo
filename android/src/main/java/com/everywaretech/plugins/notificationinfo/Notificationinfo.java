@@ -8,13 +8,14 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.PluginResult;
+import com.getcapacitor.annotation.CapacitorPlugin;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Set;
 
-@NativePlugin
+@CapacitorPlugin
 public class Notificationinfo extends Plugin {
 
     @PluginMethod

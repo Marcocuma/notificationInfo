@@ -1,26 +1,13 @@
 var capacitorPlugin = (function (exports, core) {
-    'use strict';
+	'use strict';
 
-    class NotificationinfoWeb extends core.WebPlugin {
-        constructor() {
-            super({
-                name: 'Notificationinfo',
-                platforms: ['web'],
-            });
-        }
-        getNotificationInfo() {
-            return Promise.resolve({ value: {} });
-        }
-    }
-    const Notificationinfo = new NotificationinfoWeb();
-    core.registerWebPlugin(Notificationinfo);
+	const Notificationinfo = core.registerPlugin('Notificationinfo');
 
-    exports.Notificationinfo = Notificationinfo;
-    exports.NotificationinfoWeb = NotificationinfoWeb;
+	exports.Notificationinfo = Notificationinfo;
 
-    Object.defineProperty(exports, '__esModule', { value: true });
+	Object.defineProperty(exports, '__esModule', { value: true });
 
-    return exports;
+	return exports;
 
-}({}, capacitorExports));
+})({}, capacitorExports);
 //# sourceMappingURL=plugin.js.map

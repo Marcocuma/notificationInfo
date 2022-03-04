@@ -8,8 +8,8 @@ export class NotificationinfoWeb extends WebPlugin implements NotificationinfoPl
       platforms: ['web'],
     });
   }
-
-
+  
+  
   getNotificationInfo(): Promise<{ value: Object }> {
     return Promise.resolve({ value: {} });
   }
@@ -21,3 +21,5 @@ export { Notificationinfo };
 
 import { registerWebPlugin } from '@capacitor/core';
 registerWebPlugin(Notificationinfo);
+
+

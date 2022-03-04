@@ -13,7 +13,7 @@ public class Notificationinfo: CAPPlugin {
     @objc func getNotificationInfo(_ call: CAPPluginCall) {
         if(shared.hasData) {
             shared.hasData = false
-            call.success(["data": shared.data])
+            call.resolve(["data": shared.data])
         } else {
             call.reject("Error")
         }
@@ -24,6 +24,6 @@ public class Notificationinfo: CAPPlugin {
     }
 
     @objc open func eval(){
-        self.bridge.eval(js: "window.dispatchEvent(new Event('notificationRecieved'))");
+        self.bridge?.eval(js: "window.dispatchEvent(new Event('notificationRecieved'))");
     }
 }
